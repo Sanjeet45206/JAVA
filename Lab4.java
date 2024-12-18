@@ -23,7 +23,7 @@ class Mypoint1{
         return Math.sqrt(x*x +y*y);
     }
 }
-public class S3 {
+public class Lab4 {
     public static void main(String[] args) {
         Mypoint1 point1=new Mypoint1();
         Mypoint1 point2=new Mypoint1(3,4);
