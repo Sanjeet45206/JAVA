@@ -5,7 +5,7 @@ class DivByZeroException extends Exception {
         super(message);
     }
 }
-public class s9 {
+public class Lab9 {
     public static void main(String[] args){
         System.out.println("Exception");
         int nr=10;
