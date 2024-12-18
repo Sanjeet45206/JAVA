@@ -18,7 +18,7 @@ class Employee{
     }
 }
         
-public class S2 {
+public class Lab3 {
     public static void main(String[] args){
         Employee emp1=new Employee(1,"sanjeet",5000);
         emp1.getEmpDetails();
