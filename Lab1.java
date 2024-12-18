@@ -1,28 +1,40 @@
+package pkg1;
 import java.util.Scanner;
-public class MatrixAddition {
-    public static void main(String[] args){
-        int N = Integer.parseInt(args[0]);
-        int[][] matrix1 = new int[N][N];
-        int[][] matrix2 = new int[N][N];
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the elements of the first matrix:");
-        for(int i=0;i<N;i++) {
-           for(int j=0;j<N;j++) {
-                matrix1[i][j] =scanner.nextInt();}}
-        System.out.println("Enter the elements of the second matrix:");
-        for(int i=0;i<N;i++) {
-           for(int j=0;j<N;j++) {
-                matrix2[i][j] =scanner.nextInt();}}
-        int[][] sumMatrix= new int[N][N];
-        for(int i=0;i<N;i++) {
-           for(int j=0;j<N;j++) {
-                sumMatrix[i][j]=matrix1[i][j] +matrix2[i][j]; } }
-        System.out.println("The sum of the two matrices is:");
-           for(int i=0;i<N;i++) {
-              for(int j=0;j<N;j++) {
-                  System.out.print(sumMatrix[i][j] +"  ");
-              }
-              System.out.println();
-        }
-    }
+public class lab1 {
+
+	public static void main(String[] args) {
+		int[][] matrix1=new int[2][2];
+		int[][] matrix2=new int[2][2];
+		int[][] matrix3=new int[2][2];
+		Scanner sc1=new Scanner(System.in);
+		System.out.println("Enter size of matrix");
+		int n=sc1.nextInt();
+		System.out.println("Enter elements of Matrix1");
+		for(int j=0;j<n;j++)  {
+			for(int i=0;i<n;i++) {
+				matrix1[i][j]=sc1.nextInt();
+			}
+		}
+		System.out.println("Enter elements of Matrix2");
+		for(int j=0;j<n;j++) {
+			for(int i=0;i<n;i++) {
+				matrix2[i][j]=sc1.nextInt();
+			}
+		}
+		for(int j=0;j<n;j++) {
+			for(int i=0;i<n;i++) {
+				matrix3[i][j]=matrix1[i][j]+matrix2[i][j];
+			}
+		}
+		for(int j=0;j<n;j++) {
+			for(int i=0;i<n;i++) {
+				System.out.print(matrix3[i][j]+"\t");
+			}
+			System.out.println();
+		}
+		sc1.close();
+	}
+
 }
+//Develop a Java program to add 2 matrices of suitable order N
+//The value of N should be read from command line arguments
