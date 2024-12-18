@@ -36,7 +36,7 @@ class Stack{
                     {
                         System.out.println(stk[i]);}}}}
 
-public class S1{
+public class Lab2{
     public static void main(String[] args){
         int ch;
         Stack stack1=new Stack();
