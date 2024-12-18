@@ -1,38 +1,56 @@
 package pkg1;
-class Mypoint1{
-    private int x;
-    private int y;
-    public Mypoint1(){
-        this.x=0;
-        this.y=0;}
-    public Mypoint1(int x,int y){
-        this.x=x;
-        this.y=y;}
-    public void setXY(int x,int y){
-        this.x=x;
-        this.y=y;}
-    public int[] getXY(){
-        int[] points={x,y};
-        return points;}
-    public double distance(int x,int y) {
-        int xDiff=this.x-x;
-        int yDiff=this.y-y;
-        return Math.sqrt(xDiff*xDiff + yDiff*yDiff);
-    }
-    public double distance() {
-        return Math.sqrt(x*x +y*y);
-    }
+
+class MyPoint{
+	private int x;
+	private int y;
+	public MyPoint() {
+		this.x=0;
+		this.y=0;
+	}
+	public MyPoint(int x1,int y1) {
+		this.x=x1;
+		this.y=y1;
+	}
+	public void setXY(int x1,int y1) {
+		this.x=x1;
+		this.y=y1;
+	}
+	public int[] getXY(){
+		int[]coordinates= {x,y};
+		return coordinates;
+	}
+	public double distance(int x1, int y1) {
+		int xDiff=this.x-x1;
+		int yDiff=this.y-y1;
+		return Math.sqrt(xDiff*xDiff + yDiff*yDiff);
+	}
+	public double distance(MyPoint another) {
+		int xDiff=this.x-another.x;
+		int yDiff=this.y-another.y;
+		return Math.sqrt(xDiff*xDiff + yDiff*yDiff);
+	}
+	public double distance() {
+		return Math.sqrt(x*x+y*y);
+	}
+	@Override
+	public String toString() {
+		return x + " " + y;
+	}
 }
 public class Lab4 {
-    public static void main(String[] args) {
-        Mypoint1 point1=new Mypoint1();
-        Mypoint1 point2=new Mypoint1(3,4);
-        point1.setXY(1,2);
-        int[]points=point1.getXY();
-        System.out.print("Point1 coordinates are");
-        System.out.print(points[0]+","+points[1]+"\n");
-        System.out.print(point1.distance(5,6));
-        System.out.println(point1.distance());
-    }
-    
+
+	public static void main(String[] args) {
+		System.out.println("MyPoint");
+		MyPoint p1=new MyPoint();
+		MyPoint p2=new MyPoint(3,4);
+		p1.setXY(1, 2);
+		int[] coordinates=p1.getXY();
+		System.out.println(coordinates[0] + " "+ coordinates[1]);
+		
+		System.out.println(p1.distance(5,6));
+		System.out.println(p1.distance(p2));
+		System.out.println(p1.distance());
+		System.out.println(p1);
+		System.out.println(p2);
+	}
 }
