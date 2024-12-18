@@ -36,5 +36,4 @@ public class lab1 {
 	}
 
 }
-//Develop a Java program to add 2 matrices of suitable order N
-//The value of N should be read from command line arguments
+
